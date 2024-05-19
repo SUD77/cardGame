@@ -1,8 +1,12 @@
 package com.card.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "user")
 public class User {
