@@ -26,4 +26,17 @@ public class UserServiceImpl implements UserService {
         }
         return null;
     }
+
+    //get user by username
+    @Override
+    public User getUserByUsername(String username) throws Exception {
+        User user =  this.userRepository.findByUserName(username);
+        if(user == null) {
+            System.out.println("Username not found !!");
+            throw new Exception("Username doesn't not exist");
+        }
+        else{
+            return user;
+        }
+    }
 }
